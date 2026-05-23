@@ -1,0 +1,7 @@
+anthropic>=0.25.0
+rouge-score>=0.1.2
+bert-score>=0.3.13
+sentence-transformers>=2.7.0
+nltk>=3.8.1
+numpy>=1.26.0
+pyyaml>=6.0.1
