@@ -1,0 +1,12 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install numpy pytest pyyaml
+      - run: python -c "import yaml; cfg=yaml.safe_load(open('configs/eval_config.yaml')); assert 'benchmark' in cfg; print('config OK')"
